@@ -1,0 +1,13 @@
+.vscode
+
+venv
+
+*/__pycache__/
+
+.gitignore 
+
+*.md
+
+.dockerignore
+
+.git
