@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build: Docker') {  
             steps {
-                sh "echo hello"
+                sh "bash ./jenkins/build.sh"
             }
 
+    }
