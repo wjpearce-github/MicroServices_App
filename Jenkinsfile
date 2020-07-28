@@ -4,12 +4,13 @@ pipeline{
 
     stages {
 
-        stage('Build Images') {
+        stage('Build build image & deploy stack') {
             
             steps {
 
                 sh 'chmod +x ./scripts/*.sh'
                 sh './scripts/build_images.sh'
+                sh './scripts/build_swarm.sh'
             }
             
         }
