@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Sript to build images if non exist locally
+#Sript to build images if non exist locally to save time
 
 if [[ "$(docker images -q coolwill92/service_1:latest 2> /dev/null)" == "" ]]; then
     docker build -t coolwill92/service_1 ./Service_1
