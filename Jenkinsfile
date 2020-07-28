@@ -8,10 +8,8 @@ pipeline{
             
             steps {
 
-'
                 sh 'chmod +x ./scripts/*.sh'
                 sh './scripts/build_images.sh'
-
             }
             
         }
