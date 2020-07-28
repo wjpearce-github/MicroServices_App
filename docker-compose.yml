@@ -3,9 +3,7 @@ version: "3.7"
 services: 
 
     service_1:
-        build: ./Service_1
-        container_name: service_1
-        image: coolwill/service_1
+        image: coolwill92/service_1
         ports: 
             - "5000:5000"
         networks: 
@@ -14,6 +12,10 @@ services:
             - service_4
             - service_2
             - service_3
+        deploy:
+            replicas: 2
+
+
         #enviroment:
             #- MYSQLHOST=${MYSQL_HOST}
             #- MYSQLUSER=${MYSQL_USER}
@@ -21,31 +23,29 @@ services:
             #- MYSQLDB=${MYSQL_DB}
             
     service_2:
-        build: ./Service_2
-        container_name: service_2
-        image: coolwill/service_2
-        networks: 
-            - william_network    
-
-    service_3:
-        build: ./Service_3
-        container_name: service_3
-        image: coolwill/service_3
+        image: coolwill92/service_2
         networks: 
             - william_network
+        deploy:
+            replicas: 2  
+
+    service_3:
+        image: coolwill92/service_3
+        networks: 
+            - william_network
+        deploy:
+            replicas: 2
 
     service_4:
-        build: ./Service_4
-        container_name: service_4
-        image: coolwill/service_4
+        image: coolwill92/service_4
         networks: 
             - william_network
         environment: 
             - SAMPLE=HELLO
+        deploy:
+            replicas: 2
+
             
 networks:
     william_network:
-        name: william_network
-        driver: bridge
-    another_network:
-        driver: bridge
+        driver: overlay
