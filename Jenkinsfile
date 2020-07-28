@@ -4,7 +4,7 @@ pipeline {
         stage('Deploy') {  
             
             steps {
-                sh "echo hello"
+                sh "echo hello2"
             }
 
     }
