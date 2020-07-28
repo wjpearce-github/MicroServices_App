@@ -5,6 +5,6 @@ import random
 @app.route('/name', methods=['GET'])
 def ending():
 
-	list = ['Kong','Mac','Smith','Killer','Chomper','Biter','Samus']
+	list = ['Kong','Mac','Smith','Killer','Chomper','Biter','Samus', 'Jin']
 	
-	return list[random.randrange(6)]
+	return list[random.randrange(8)]
