@@ -4,7 +4,7 @@ pipeline{
 
     stages {
 
-        stage('Build build image & deploy stack') {
+        stage('Build image & deploy swarm with updates') {
             
             steps {
 
