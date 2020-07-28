@@ -1,9 +1,10 @@
 pipeline {
     agent any 
     stages {
-        stage('Build: Docker') {  
+        stage('Deploy') {  
+            
             steps {
-                sh "bash ./jenkins/build.sh"
+                sh "echo hello"
             }
 
     }
