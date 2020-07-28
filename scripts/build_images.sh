@@ -12,7 +12,7 @@ if [[ "$(docker images -q coolwill92/service_2:latest 2> /dev/null)" == "" ]]; t
 fi
 
 
-if [[ "$(docker images -q coolwill92/service_1:latest 3> /dev/null)" == "" ]]; then
+if [[ "$(docker images -q coolwill92/service_3:latest 3> /dev/null)" == "" ]]; then
     docker build -t coolwill92/service_3 ./Service_3
 fi
 
