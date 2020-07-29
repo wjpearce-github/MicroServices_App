@@ -1,30 +1,31 @@
-pipeline{
+pipeline {
 
-    agent any
+    agent any 
 
     stages {
 
-        stage('Build and Push') {
-            
-            steps {
+        stage('Build Images') {
+
+            steps{
 
                 sh 'chmod +x ./scripts/*.sh'
                 sh './scripts/build_images.sh'
+
             }
-            
+
         }
 
-        stage('Build') {
-            
-            steps {
+        stage('Build ') {
 
-                sh 'chmod +x ./scripts/*.sh'
+            steps{
+
                 sh './scripts/build_swarm.sh'
+
             }
-            
+
         }
 
-        stage('Update') {
+          stage('Update ') {
             
             steps {
 
