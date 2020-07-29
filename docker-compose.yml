@@ -16,11 +16,12 @@ services:
             replicas: 2
 
 
-        #enviroment:
-            #- MYSQLHOST=${MYSQL_HOST}
-            #- MYSQLUSER=${MYSQL_USER}
-            #- MYSQLPASSWORD=${MYSQL_PASSWORD}
-            #- MYSQLDB=${MYSQL_DB}
+         #enviroment:
+          #   - MYSQLHOST=${MYSQL_HOST}
+          #   - MYSQLUSER=${MYSQL_USER}
+          #   - MYSQLPASSWORD=${MYSQL_PASSWORD}
+          #  - MYSQLDB=${MYSQL_DB}
+          #  - SECRET_KEY=${SECRET_KEY}
             
     service_2:
         image: coolwill92/service_2

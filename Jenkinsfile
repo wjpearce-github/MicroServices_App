@@ -15,7 +15,7 @@ pipeline {
 
         }
 
-        stage('Build ') {
+        stage('Engage Swarm Build Stack') {
 
             steps{
 
@@ -25,7 +25,7 @@ pipeline {
 
         }
 
-          stage('Update ') {
+          stage('Update Swarm') {
             
             steps {
 
