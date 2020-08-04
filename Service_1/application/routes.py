@@ -48,6 +48,6 @@ def home():
     games_data = games.query.order_by(games.id.desc())
     db.session.add(game_data)
     db.session.commit()
-    return render_template('index.html', game = game, games_data = games_data, title = 'Home')
+    return render_template('index.html', game = games, games_data = games_data, title = 'Home')
 
 
