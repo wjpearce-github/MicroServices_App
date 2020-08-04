@@ -3,6 +3,7 @@ from flask import render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from os import environ
 import requests
+import os
 import random
 
 app.config['SECRET_KEY'] = '60ae1c92bc03176e8976331683eb9c54' 
