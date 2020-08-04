@@ -14,13 +14,6 @@ services:
             - service_3
         deploy:
             replicas: 2
-
-
-        #enviroment:
-            #- MYSQLHOST=${MYSQL_HOST}
-            #- MYSQLUSER=${MYSQL_USER}
-            #- MYSQLPASSWORD=${MYSQL_PASSWORD}
-            #- MYSQLDB=${MYSQL_DB}
             
     service_2:
         image: coolwill92/service_2
@@ -40,8 +33,6 @@ services:
         image: coolwill92/service_4
         networks: 
             - william_network
-        environment: 
-            - SAMPLE=HELLO
         deploy:
             replicas: 2
 

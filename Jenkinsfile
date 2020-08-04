@@ -1,15 +1,36 @@
-pipeline{
+pipeline {
 
-    agent any
+    agent any 
 
     stages {
 
-        stage('Deploy') {
+        stage('Build Images') {
+
+            steps{
+
+                sh 'chmod +x ./scripts/*.sh'
+                sh './scripts/build_images.sh'
+
+            }
+
+        }
+
+        stage('Engage Swarm ') {
+
+            steps{
+
+                sh './scripts/build_swarm.sh'
+
+            }
+
+        }
+
+          stage('Update Swarm') {
             
             steps {
 
-                sh 'echo Hello'
-
+                sh 'chmod +x ./scripts/*.sh'
+                sh './scripts/update_swarm.sh'
             }
             
         }
@@ -17,3 +38,6 @@ pipeline{
     }
 
 }
+
+
+
