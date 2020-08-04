@@ -6,6 +6,8 @@ import requests
 import random
 
 
+
+
 app.config['SECRET_KEY'] = '60ae1c92bc03176e8976331683eb9c54' 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + \
@@ -20,6 +22,13 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + \
                                         environ.get('MYSQL_DB_NAME')
 
 db = SQLAlchemy(app)
+
+
+@app.route('/', methods=['GET'])
+def home():
+    response = requests.get('http://service_4:5003/rpgname')
+    rpgname = response.text
+    return render_template('index.html', rpgname = rpgname, title = 'Home')
 
 class games(db.Model):
     id = db.Column(db.Integer, primary_key=True, unique=True)
@@ -36,8 +45,4 @@ class games(db.Model):
     )
 
 
-@app.route('/', methods=['GET'])
-def home():
-    response = requests.get('http://service_4:5003/rpgname')
-    rpgname = response.text
-    return render_template('index.html', rpgname = rpgname, title = 'Home')
+
