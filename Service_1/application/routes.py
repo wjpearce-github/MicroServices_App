@@ -35,19 +35,10 @@ class games(db.Model):
         ]
     )
 
-
 @app.route('/', methods=['GET'])
 def home():
-    response = requests.get('http://service_4:5003/randomword')
-    print(response)
-    game = response.text
-    game_data = games(
-        f_name=game
-        
-    )
-    games_data = games.query.order_by(games.id.desc())
-    db.session.add(game_data)
-    db.session.commit()
-    return render_template('index.html', game = games, games_data = games_data, title = 'Home')
+    response = requests.get('http://service_4:5003/rpgname')
+    rpgname = response.text
+    return render_template('index.html', rpgname = rpgname, title = 'Home')
 
 
