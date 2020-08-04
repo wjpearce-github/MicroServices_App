@@ -4,7 +4,6 @@ from flask_sqlalchemy import SQLAlchemy
 from os import environ
 import requests
 import random
-from os import environ
 
 app.config['SECRET_KEY'] = '60ae1c92bc03176e8976331683eb9c54' 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
