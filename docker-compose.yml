@@ -14,9 +14,7 @@ services:
             - service_3
         deploy:
             replicas: 2
-
-
-   
+            
     service_2:
         image: coolwill92/service_2
         networks: 
@@ -35,13 +33,6 @@ services:
         image: coolwill92/service_4
         networks: 
             - william_network
-        environment:
-            - SQLHOST=$(MYSQL_HOST)
-            - PASSWORD=$(MYSQL_PASSWORD)
-            - PORT=$(MYSQL_PORT)
-            - USER=$(MYSQL_USER)
-            - DBNAME=$(MYSQL_DB_NAME)}
-
             replicas: 2
 
             
