@@ -10,5 +10,7 @@ import random
 @app.route('/', methods=['GET'])
 def home():
     response = requests.get('http://service_4:5003/rpgname')
+    print(response)
     rpgname = response.text
-    return render_template('index.html', rpgname = rpgname, title = 'Home')
+    game_data = games.query.all()
+    return render_template('index.html', rpgname=sentence, games=games_data, title='Home')
