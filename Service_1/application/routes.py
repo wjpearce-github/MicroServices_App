@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from os import environ
 import requests
 import random
-
+from os import environ
 
 app.config['SECRET_KEY'] = '60ae1c92bc03176e8976331683eb9c54' 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -24,13 +24,13 @@ db = SQLAlchemy(app)
 class games(db.Model):
     id = db.Column(db.Integer, primary_key=True, unique=True)
     f_name = db.Column(db.String(50), nullable=False)
-    l_name = db.Column(db.String(50), nullable=False)
+
+
    
     def __repr__(self):
         return ''.join(
         [
-            'First name ' + self.f_name + '\n' 
-            'Lat name ' + self.l_name + '\n'
+            'First name ' + self.f_name + '\n'  
             'ID: ' + str(self.id)
         ]
     )
@@ -38,8 +38,16 @@ class games(db.Model):
 
 @app.route('/', methods=['GET'])
 def home():
-    response = requests.get('http://service_4:5003/rpgname')
+    response = requests.get('http://service_4:5003/randomword')
     print(response)
-    rpgname = response.text
-    game_data = games.query.all()
-    return render_template('index.html', rpgname=sentence, games=games_data, title='Home')
+    game = response.text
+    game_data = games(
+        f_name=game
+        
+    )
+    games_data = games.query.order_by(games.id.desc())
+    db.session.add(game_data)
+    db.session.commit()
+    return render_template('index.html', game = game, games_data = games_data, title = 'Home')
+
+

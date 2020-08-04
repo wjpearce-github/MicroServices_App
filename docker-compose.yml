@@ -33,6 +33,7 @@ services:
         image: coolwill92/service_4
         networks: 
             - william_network
+        deploy:
             replicas: 2
 
             
