@@ -45,6 +45,7 @@ def home():
         f_name=game
         
     )
+    print(game)
     games_data = games.query.order_by(games.id.desc())
     db.session.add(game_data)
     db.session.commit()
