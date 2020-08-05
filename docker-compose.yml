@@ -3,6 +3,7 @@ version: "3.7"
 services: 
 
     service_1:
+        build: ./Service_1
         image: coolwill92/service_1
         networks: 
             - william_network
@@ -12,15 +13,17 @@ services:
             - service_3
         deploy:
             replicas: 2
-        # environment: 
-        #     - SECRET_KEY=${SECRET_KEY}   
-        #     - MYSQL_USER=${MYSQL_USER}
-        #     - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-        #     - MYSQL_HOST=${MYSQL_HOST}
-        #     - MYSQL_PORT=${MYSQL_PORT}
-        #     - MYSQL_DB_NAME=${MYSQL_DB_NAME}
+        environment: 
+            - SECRET_KEY=${SECRET_KEY}   
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+            - MYSQL_HOST=${MYSQL_HOST}
+            - MYSQL_PORT=${MYSQL_PORT}
+            - MYSQL_DB_NAME=${MYSQL_DB_NAME}
+        
             
     service_2:
+        build: ./Service_2
         image: coolwill92/service_2
         networks: 
             - william_network
@@ -28,6 +31,7 @@ services:
             replicas: 2  
 
     service_3:
+        build: ./Service_3
         image: coolwill92/service_3
         networks: 
             - william_network
@@ -35,6 +39,7 @@ services:
             replicas: 2
 
     service_4:
+        build: ./Service_4
         image: coolwill92/service_4
         networks: 
             - william_network
