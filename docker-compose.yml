@@ -4,8 +4,6 @@ services:
 
     service_1:
         image: coolwill92/service_1
-        ports: 
-            - "5000:5000"
         networks: 
             - william_network
         depends_on: 
@@ -42,8 +40,26 @@ services:
             - william_network
         deploy:
             replicas: 2
-
+    
+    nginx:
+        build:
+            context: ./NGINX
+            dockerfile: Dockerfile
+        image: coolwill92/nginx
+        ports:
+            - "80:80"
+        networks:
+            - william_network
+        depends_on:
+            - service_4
+            - service_3
+            - service_2
+            - service_1
+        deploy:
+            replicas: 2
             
 networks:
     william_network:
         driver: overlay
+
+
