@@ -6,6 +6,7 @@ import requests
 import os
 import random
 
+
 @app.route('/', methods=['GET'])
 def home():
     response = requests.get('http://service_4:5003/rpgname')
