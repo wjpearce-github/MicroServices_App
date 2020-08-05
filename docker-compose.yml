@@ -55,11 +55,6 @@ services:
             - "80:80"
         networks:
             - william_network
-        depends_on:
-            - service_4
-            - service_3
-            - service_2
-            - service_1
         deploy:
             replicas: 2
             
