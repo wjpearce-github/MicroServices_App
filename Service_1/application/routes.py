@@ -5,7 +5,7 @@ from os import environ
 import requests
 import random
 
-app.config['SECRET_KEY'] = '919c92fab903330df5b2f66c22d3b22b'  # environ.get('SECRET_KEY')
+app.config['SECRET_KEY'] = '60ae1c92bc03176e8976331683eb9c54' 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + \
                                         environ.get('MYSQL_USER') + \
