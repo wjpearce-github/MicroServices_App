@@ -25,7 +25,6 @@ db = SQLAlchemy(app)
 
 
 
-
 class games(db.Model):
     id = db.Column(db.Integer, primary_key=True, unique=True)
     f_name = db.Column(db.String(50), nullable=False)
@@ -44,12 +43,6 @@ def home():
     response = requests.get('http://service_4:5003/randomword')
     print(response)
     sentence = response.text
-    game_data = games(
-        name=randomword
-    )
-        
-    print(randomword)
-    printing = games.query.order_by(games.id.desc())
-    db.session.add(game_data)
-    db.session.commit()
-    return render_template('index.html', randomword=randomword, games=game_data, title='Home')
+    game_data = games.query.all()
+
+    return render_template('index.html', sentence=sentence, games=game_data, title='Home')
