@@ -38,7 +38,9 @@ def home():
     response = requests.get('http://service_4:5003/randomword')
     print(response)
     sentence = response.text
-    game_data = games.query.all()
+    game_data = games.query.all(
+        f_name = sentence
+    )
 
     sentence = games.query.order_by(games.id.desc())
     db.session.add(game_data)
