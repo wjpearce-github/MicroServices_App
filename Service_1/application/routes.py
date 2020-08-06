@@ -39,4 +39,9 @@ def home():
     print(response)
     sentence = response.text
     game_data = games.query.all()
+
+    sentence = games.query.order_by(games.id.desc())
+    db.session.add(game_data)
+    db.session.commit()
+
     return render_template('index.html', sentence=sentence, games=game_data, title='Home')
