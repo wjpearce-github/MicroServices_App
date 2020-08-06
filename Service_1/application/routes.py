@@ -45,4 +45,12 @@ def home():
     sentence = response.text
     game_data = games.query.all()
 
+    # print(randomword)
+    # display = games.query.order_by(games.id.desc())
+    name = games(
+        f_name=sentence
+    )
+    db.session.add(name)
+    db.session.commit()
+
     return render_template('index.html', sentence=sentence, games=game_data, title='Home')
