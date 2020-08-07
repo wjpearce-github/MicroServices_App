@@ -4,6 +4,14 @@ pipeline {
 
     stages {
 
+        stage('Ansible') {
+
+                steps {
+                    sh 'chmod +x ./scripts/*.sh'
+                    sh './scripts/ansible.sh'
+                }
+        }
+
         stage('Build Images') {
 
             steps{
