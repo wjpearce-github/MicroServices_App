@@ -118,11 +118,17 @@ The CI Pipeline implanted in this project centred around the following technolog
 
 ### DockerHub  
 
+
+
 <p align="center">
     <img width="650" height="700" src="https://i.imgur.com/jmfP3zg.png"
     </p>
 
+    
+
 ### Jenkins Pipeline   
+
+
 
 <p align="center">
     <img width="650" height="700" src="https://i.imgur.com/9WQl5MI.png"
@@ -136,7 +142,7 @@ This data is then passed back to be displayed for the user to access previous na
 
 
 <p align="center">
-    <img width="300" height="400" src="https://i.imgur.com/LDHnkpH.png"
+    <img width="400" height="300" src="https://i.imgur.com/LDHnkpH.png"
     </p>
 
 
