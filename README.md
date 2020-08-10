@@ -29,7 +29,7 @@ https://trello.com/b/TBMVwmEY/generator
 
 
 ### Brief
-To create an application utilising service-oriented architecture comprising of four micro-services working together. Using a containerisation tool, deploying the entire application through a continuous integration server and ultimately pushed into a correctly configured production environment.  
+Create an application utilising service-oriented architecture comprising of four micro-services working together. Using a containerisation tool, deploying the entire application through a continuous integration server and ultimately pushing into a correctly configured production environment.  
 
 ### Minimum Requirements
 *	Documentation of the source code, planning stage, risk assessment and project tracking.
@@ -44,7 +44,7 @@ To create an application utilising service-oriented architecture comprising of f
 
 ### Functionality 
 
-The application I have created generates random names to use in RPG games as the main character. As stated in the project brief, two versions of the application exist: One simple black and white version and one with different clouded title text. 
+The application I have created generates random names to use in RPG games as the main character. As stated in the project brief, two versions of the application exist: One simple black and white version and one with extra exclamation marks after the title. 
 The application is comprised of four different micro-services written in Python each relying on the other to generate the final result:
 * Service one: Is a basic Flask Application with a HTML template. 
 * Service Two: Contains a function with a list of eight possible choices for a first name, one of which will be selected at random.
@@ -69,7 +69,7 @@ Trello : Splitting up Must Have, Should Have and Could Have for functionality. F
 
 ### Data: ERD Diagram 
 
-Hosted on a Google Cloud MySQL Server, similar to the Crud application I created a database and table to hold the generated names: Setting the id to autoincrement and as the primary key. 
+Hosted on a Google Cloud MySQL Server, similar to the Crud application I created a database and table to hold the generated names: Setting the id to autoincrement  as the primary key. 
 
 <p align="center">
     <img width="600" height="300" src="https://i.imgur.com/JxYtxKC.png"
@@ -78,7 +78,7 @@ Hosted on a Google Cloud MySQL Server, similar to the Crud application I created
 
 ### Feature Branch Model 
 
-Here you can see I have my project has fully implanted version control using Git and GitHub making you use of the feature branch model. 
+Here you can see my project hasfully implemented version control using Git and GitHub, making you use of the feature branch model. 
 
 <p align="center">
     <img width="600" height="300" src="https://i.imgur.com/jXkh7KN.png"
@@ -106,7 +106,7 @@ Here you can see I have my project has fully implanted version control using Git
     </p>
     
 As with any DevOps focused project an informative, clear CI pipeline was an integral part once the application design had been completed. 
-The CI Pipeline implanted in this project centred around the following technologies and is displayed below.
+The CI Pipeline in this project centred around the following technologies and is displayed below.
 
 *	The source code is created in Python, Flask and HTML.
 *	When changes are made, they are pushed pushing up to my ‘Second_App’ repository on GitHub.
@@ -118,6 +118,7 @@ The CI Pipeline implanted in this project centred around the following technolog
 
 ### DockerHub  
 
+Wehre the images are updataed
 
 
 <p align="center">
@@ -128,6 +129,7 @@ The CI Pipeline implanted in this project centred around the following technolog
 
 ### Jenkins Pipeline   
 
+Runnning the scripts and presenting error logs or successful builds
 
 
 <p align="center">
@@ -169,4 +171,5 @@ At the moment I am dealing with an issue where even if entries are deleted the a
 
 
 ### Author
+
 ##### William Pearce
