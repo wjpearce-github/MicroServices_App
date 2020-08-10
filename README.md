@@ -23,7 +23,6 @@ https://trello.com/b/TBMVwmEY/generator
 *	Design
 *	 Front-End Design 
 *	Risk Assessment
-*	Deployment 
 *	Reflection 
 *	Bugs & Current Issues
 
