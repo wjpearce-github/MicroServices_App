@@ -4,7 +4,6 @@ from flask_sqlalchemy import SQLAlchemy
 from os import environ
 import requests
 import random
-from os import environ
 
 app.config['SECRET_KEY'] = environ.get('SECRET_KEY')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -21,33 +20,37 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + \
 
 db = SQLAlchemy(app)
 
+
+
+
+
+
 class games(db.Model):
     id = db.Column(db.Integer, primary_key=True, unique=True)
     f_name = db.Column(db.String(50), nullable=False)
-
-
    
     def __repr__(self):
         return ''.join(
         [
-            'First name ' + self.f_name + '\n'  
+            'F_name: ' + self.f_name + '\n' 
             'ID: ' + str(self.id)
         ]
     )
 
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
     response = requests.get('http://service_4:5003/randomword')
     print(response)
-    game = response.text
-    game_data = games(
-        f_name=game
-        
+    sentence = response.text
+    game_data = games.query.all()
+
+    # print(randomword)
+    # display = games.query.order_by(games.id.desc())
+    name = games(
+        f_name=sentence
     )
-    games_data = games.query.order_by(games.id.desc())
-    db.session.add(game_data)
+    db.session.add(name)
     db.session.commit()
-    return render_template('index.html', game = game, games_data = games_data, title = 'Home')
 
-
+    return render_template('index.html', sentence=sentence, games=game_data, title='Home')
