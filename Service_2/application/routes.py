@@ -5,7 +5,7 @@ import random
 @app.route('/name', methods=['GET'])
 def beginning():
 
-	list = ['Link','Fast','Tall','Bowser','Small','Big','Wizard', 'Angry']
+	list = ['Link','Fast','Tall','Bowser','Small','Big','Wizard', 'Angry', 'Happy']
 	
 	
-	return list[random.randrange(8)]
+	return list[random.randrange(9)]
