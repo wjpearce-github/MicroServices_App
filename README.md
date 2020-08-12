@@ -141,7 +141,7 @@ Runnning the scripts and presenting error logs or successful builds
 
 
 <p align="center">
-    <img width="650" height="500" src="https://i.imgur.com/cStssmk.png"
+    <img width="450" height="300" src="https://i.imgur.com/cStssmk.png"
     </p>
 
 ### V1.0 Front-end Design
@@ -152,7 +152,7 @@ This data is then passed back to be displayed for the user to access previous na
 
 
 <p align="center">
-    <img width="400" height="300" src="https://i.imgur.com/LDHnkpH.png"
+    <img width="325" height="275" src="https://i.imgur.com/LDHnkpH.png"
     </p>
 
 
@@ -165,7 +165,7 @@ This data is then passed back to be displayed for the user to access previous na
 ### Risk Assessment 
 
 <p align="center">
-    <img width="750" height="500" src="https://i.imgur.com/IcFv5MR.png"
+    <img width="550" height="500" src="https://i.imgur.com/IcFv5MR.png"
     </p>
 
 ### Retrospective & future improvements 
