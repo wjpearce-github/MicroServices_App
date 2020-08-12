@@ -1,7 +1,7 @@
 # SFIA2 Project
 William Pearce
 
-<<<<<<< development
+
 ### App Link: Manager
 http://35.214.71.19/
 
@@ -83,7 +83,10 @@ Here you can see my project hasfully implemented version control using Git and G
 <p align="center">
     <img width="600" height="300" src="https://i.imgur.com/jXkh7KN.png"
     </p>
-
+    
+<p align="center">
+    <img width="600" height="300" src="https://i.imgur.com/TReNIMl.png"
+    </p>
 
 ### Tech Stack
 
@@ -102,7 +105,7 @@ Here you can see my project hasfully implemented version control using Git and G
 ### CI Pipeline 
 
 <p align="center">
-    <img width="850" height="800" src="https://i.imgur.com/0QpD811.png"
+    <img width="650" height="600" src="https://i.imgur.com/0QpD811.png"
     </p>
     
 As with any DevOps focused project an informative, clear CI pipeline was an integral part once the application design had been completed. 
@@ -122,7 +125,7 @@ Wehre the images are updataed
 
 
 <p align="center">
-    <img width="650" height="700" src="https://i.imgur.com/jmfP3zg.png"
+    <img width="650" height="600" src="https://i.imgur.com/jmfP3zg.png"
     </p>
 
     
@@ -133,7 +136,12 @@ Runnning the scripts and presenting error logs or successful builds
 
 
 <p align="center">
-    <img width="650" height="700" src="https://i.imgur.com/9WQl5MI.png"
+    <img width="650" height="500" src="https://i.imgur.com/9WQl5MI.png"
+    </p>
+
+
+<p align="center">
+    <img width="650" height="500" src="https://i.imgur.com/cStssmk.png"
     </p>
 
 ### V1.0 Front-end Design
@@ -173,5 +181,3 @@ At the moment I am dealing with an issue where even if entries are deleted the a
 ### Author
 
 ##### William Pearce
-=======
-# William Pearce
