@@ -47,9 +47,6 @@ services:
             replicas: 2
     
     nginx:
-        build:
-            context: ./NGINX
-            dockerfile: Dockerfile
         image: coolwill92/nginx
         ports:
             - "80:80"

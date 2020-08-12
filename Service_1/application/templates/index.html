@@ -6,7 +6,7 @@
 
 <body>
     <h1>
-        RPG Name Generator!! 
+        RPG Name Generator!
     </h1>
     <p>
         {{ sentence }}
@@ -17,11 +17,11 @@
     <br>
     <br>
     <table>
-    {% for games in games %}
+    {% for willdatabase in willdatabase %}
         <div class="content">
         <tr>
-            <td>{{ games.id }}</td>
-            <td>{{ games.f_name }}</td>
+            <td>{{ willdatabase.id }}</td>
+            <td>{{ willdatabase.f_name }}</td>
         </tr>
         </div>
     {% endfor %}
