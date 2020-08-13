@@ -85,7 +85,7 @@ Here you can see my project hasfully implemented version control using Git and G
     </p>
     
 <p align="center">
-    <img width="600" height="300" src="https://i.imgur.com/TReNIMl.png"
+    <img width="475" height="300" src="https://i.imgur.com/TReNIMl.png"
     </p>
 
 ### Tech Stack
@@ -141,7 +141,7 @@ Runnning the scripts and presenting error logs or successful builds
 
 
 <p align="center">
-    <img width="450" height="300" src="https://i.imgur.com/cStssmk.png"
+    <img width="550" height="300" src="https://i.imgur.com/cStssmk.png"
     </p>
 
 ### V1.0 Front-end Design
@@ -165,7 +165,7 @@ This data is then passed back to be displayed for the user to access previous na
 ### Risk Assessment 
 
 <p align="center">
-    <img width="550" height="500" src="https://i.imgur.com/IcFv5MR.png"
+    <img width="750" height="600" src="https://i.imgur.com/IcFv5MR.png"
     </p>
 
 ### Retrospective & future improvements 
